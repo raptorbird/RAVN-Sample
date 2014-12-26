@@ -22,7 +22,7 @@ from time import sleep
 myDrone = Drone(async=True)
 myDrone.takeoff()
 sleep(10)
-myDrone.goto(29.8563982, -95.6506164, 2)
+myDrone.goto(insert your latitude, insert your longitude, 2) #insert the parameters with 4 digits of precision. such as ##.####
 sleep(30)
 myDrone.land()
 print(myDrone.get_location())
