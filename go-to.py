@@ -18,11 +18,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 """
 
 from ravn import Drone
-from time import sleep
+from time import sleep #important to import
+
 myDrone = Drone(async=True)
 myDrone.takeoff()
-sleep(10)
-myDrone.goto(29.8563982, -95.6506164, 2)
-sleep(30)
+sleep(10) #delay accounts for async
+myDrone.goto(insert your latitude, insert your longitude, 2) #insert the parameters with 4 digits of precision. such as ##.####
+sleep(30) #delay accounts for async
 myDrone.land()
-print(myDrone.get_location())
